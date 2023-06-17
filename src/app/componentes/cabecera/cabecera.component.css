@@ -1,0 +1,25 @@
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(63, 170, 212);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: beige;
+    font-size: 1.6em;
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+

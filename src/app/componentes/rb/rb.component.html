@@ -1,0 +1,18 @@
+<!-- Aplicacion del filtro -->
+
+<div class="mt-2">
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-primary">
+      <input type="radio" name="filtro" [(ngModel)]="filtroRB" value="todos" (change)="filtrar()"> Todos
+    </label>
+
+    <label class="btn btn-primary">
+      <input type="radio" name="filtro" [(ngModel)]="filtroRB" value="aprobados" (change)="filtrar()"> Aprobados
+    </label>
+
+    <label class="btn btn-primary">
+      <input type="radio" name="filtro" [(ngModel)]="filtroRB" value="reprobados" (change)="filtrar()"> Reprobados
+    </label>
+  </div>
+</div>
+  

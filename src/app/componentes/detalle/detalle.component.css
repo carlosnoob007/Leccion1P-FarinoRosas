@@ -1,0 +1,20 @@
+button{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+}
+
+.btn-group label {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    
+}
+
+.small-button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  

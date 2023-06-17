@@ -1,0 +1,14 @@
+<header>
+    <br>
+
+    <div class="d-flex justify-content-center">
+      <button [matMenuTriggerFor]="menu" class="btn btn-primary rounded-circle"><i class="bi bi-house"></i></button>
+    </div>
+    <mat-menu #menu="matMenu" id="menu">
+      <ng-container *ngFor="let item of menuItems">
+        <button mat-menu-item [routerLink]="item.path" routerLinkActive="active">{{ item.label }}</button>
+      </ng-container>
+    </mat-menu>
+    
+    <br>
+</header>

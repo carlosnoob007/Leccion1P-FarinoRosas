@@ -1,0 +1,75 @@
+<componente-cabecera></componente-cabecera>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Configuración de los input -->
+    <div class="input-group">
+      <input type="text" [(ngModel)]="cedula" class="form-control form-control-lg" placeholder="Cedula">
+      <input type="text" [(ngModel)]="nombre" class="form-control form-control-lg" placeholder="Nombre">
+      <input type="text" [(ngModel)]="apellido" class="form-control form-control-lg" placeholder="Apellido">
+      <input type="text" [(ngModel)]="asignatura" class="form-control form-control-lg" placeholder="Asignatura">
+      <input type="date" [(ngModel)]="fecha" class="form-control form-control-lg" placeholder="Fecha">
+      <button class="btn btn-primary" (click)="agregarAlumno()">Agregar</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <thead class="table-primary">
+          <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Asignatura</th>
+            <th>Fecha</th>
+            <th></th> <!-- Columna para el botón de eliminar -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of listAlumno; let i = index">
+            <td>{{ alumno.cedula }}</td>
+            <td>{{ alumno.nombre }}</td>
+            <td>{{ alumno.apellido }}</td>
+            <td>{{ alumno.asignatura }}</td>
+            <td>{{ alumno.fecha | date }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="eliminarAlumno(i)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <table class="table table-bordered">
+        <thead class="table-primary">
+          <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Asignatura</th>
+            <th>Fecha</th>
+            <th></th> <!-- Columna para el botón de eliminar -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of listAlumno2; let i = index">
+            <td>{{ alumno.cedula }}</td>
+            <td>{{ alumno.nombre }}</td>
+            <td>{{ alumno.apellido }}</td>
+            <td>{{ alumno.asignatura }}</td>
+            <td>{{ alumno.fecha | date }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="eliminarAlumno2(i)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<componente-pie></componente-pie>
